@@ -35,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NOISE TEXTURE */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -43,7 +42,6 @@ body::before {
   pointer-events: none; z-index: 0; opacity: 0.4;
 }
 
-/* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
@@ -79,7 +77,6 @@ nav {
 }
 .nav-cta:hover { border-color: var(--cyan); color: var(--cyan); background: var(--glow-c); }
 
-/* HERO */
 #hero {
   min-height: 100vh;
   display: grid;
@@ -91,7 +88,6 @@ nav {
   position: relative; z-index: 1;
 }
 
-.hero-left {}
 .hero-status {
   display: inline-flex; align-items: center; gap: 0.6rem;
   font-family: 'JetBrains Mono', monospace;
@@ -160,7 +156,6 @@ nav {
 }
 .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); background: var(--glow-c); }
 
-/* HERO RIGHT — BENTO CARD STACK */
 .hero-right {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -176,7 +171,6 @@ nav {
   transition: border-color 0.25s, transform 0.25s;
 }
 .hcard:hover { border-color: var(--border-bright); transform: translateY(-3px); }
-
 .hcard-wide { grid-column: span 2; }
 
 .hcard-label {
@@ -214,15 +208,9 @@ nav {
   font-size: 0.78rem; color: var(--text-2); line-height: 1.5;
 }
 
-.hcard-companies {
-  display: flex; flex-direction: column; gap: 0.6rem;
-}
-.company-row {
-  display: flex; align-items: center; gap: 0.7rem;
-}
-.company-dot {
-  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-}
+.hcard-companies { display: flex; flex-direction: column; gap: 0.6rem; }
+.company-row { display: flex; align-items: center; gap: 0.7rem; }
+.company-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .company-dot.c1 { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
 .company-dot.c2 { background: var(--violet); box-shadow: 0 0 8px var(--violet); }
 .company-name { font-size: 0.82rem; font-weight: 500; color: var(--text); }
@@ -239,7 +227,6 @@ nav {
 }
 .chip.v { background: rgba(167,139,250,0.07); color: var(--violet); border-color: rgba(167,139,250,0.15); }
 
-/* SECTION WRAPPER */
 .section-wrap {
   max-width: 1280px; margin: 0 auto;
   padding: 6rem 3rem;
@@ -261,17 +248,13 @@ nav {
   color: var(--text); margin-bottom: 3.5rem;
 }
 
-/* DIVIDER */
 .divider {
   width: 100%; height: 1px;
   background: linear-gradient(90deg, transparent, var(--border), transparent);
   position: relative; z-index: 1;
 }
 
-/* EXPERIENCE */
-.exp-grid {
-  display: grid; gap: 1.5rem;
-}
+.exp-grid { display: grid; gap: 1.5rem; }
 .exp-card {
   display: grid; grid-template-columns: 200px 1fr;
   background: var(--card); border: 1px solid var(--border);
@@ -328,7 +311,6 @@ nav {
 }
 .exp-bullets li.v::before { background: var(--violet); }
 
-/* SKILLS */
 .skills-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
 }
@@ -353,7 +335,6 @@ nav {
   color: var(--text-2); border: 1px solid var(--border);
 }
 
-/* PROJECTS */
 .projects-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
 }
@@ -378,10 +359,7 @@ nav {
   margin-bottom: 1.2rem; position: relative; z-index: 1;
 }
 .proj-emoji { font-size: 1.6rem; }
-.proj-arrow {
-  color: var(--text-3); font-size: 1.1rem;
-  transition: all 0.2s;
-}
+.proj-arrow { color: var(--text-3); font-size: 1.1rem; transition: all 0.2s; }
 .proj-card:hover .proj-arrow { color: var(--cyan); transform: translate(3px,-3px); }
 .proj-title {
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -402,7 +380,6 @@ nav {
   border: 1px solid rgba(167,139,250,0.15);
 }
 
-/* PUBLICATION */
 .pub-banner {
   background: var(--card);
   border: 1px solid var(--border);
@@ -445,7 +422,6 @@ nav {
 }
 .pub-right p { font-size: 0.88rem; color: var(--text-2); line-height: 1.8; }
 
-/* EDUCATION */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .edu-card {
   background: var(--card); border: 1px solid var(--border);
@@ -466,7 +442,6 @@ nav {
 .edu-school { font-size: 0.82rem; color: var(--cyan); margin-bottom: 0.2rem; }
 .edu-dates { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--text-3); }
 
-/* CONTACT */
 #contact {
   text-align: center;
   padding: 7rem 3rem;
@@ -501,7 +476,6 @@ nav {
 }
 .contact-link:hover { border-color: var(--cyan); color: var(--cyan); background: var(--glow-c); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(34,211,238,0.1); }
 
-/* FOOTER */
 footer {
   padding: 2rem 3rem; border-top: 1px solid var(--border);
   text-align: center;
@@ -510,16 +484,13 @@ footer {
   position: relative; z-index: 1;
 }
 
-/* REVEAL */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
-/* SCROLLBAR */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--card2); border-radius: 10px; }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   #hero { grid-template-columns: 1fr; gap: 3rem; }
   .hero-right { grid-template-columns: repeat(3, 1fr); }
@@ -574,7 +545,6 @@ footer {
   </div>
 
   <div class="hero-right">
-    <!-- Stats -->
     <div class="hcard">
       <div class="hcard-label">Experience</div>
       <div class="hcard-value cyan">3+</div>
@@ -586,14 +556,12 @@ footer {
       <div class="hcard-sub">Built &amp; deployed</div>
     </div>
 
-    <!-- Publication -->
     <div class="hcard hcard-pub hcard-wide">
       <div class="pub-year">ACM CHI '25</div>
       <div class="pub-name">Primary Author · Published Research</div>
       <div class="pub-title">Discrepancies in Mobile App Permissions — Transparency &amp; User Awareness in Android</div>
     </div>
 
-    <!-- Companies -->
     <div class="hcard">
       <div class="hcard-label">Companies</div>
       <div class="hcard-companies" style="margin-top:0.6rem">
@@ -608,13 +576,12 @@ footer {
           <div class="company-dot c2"></div>
           <div>
             <div class="company-name">Capgemini</div>
-            <div class="company-role">ML Engineer</div>
+            <div class="company-role">AI/ML Engineer</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Stack -->
     <div class="hcard hcard-stack">
       <div class="hcard-label">Core Stack</div>
       <div class="stack-chips">
@@ -639,45 +606,48 @@ footer {
   <h2 class="section-title reveal">Where I've worked</h2>
   <div class="exp-grid">
 
+    <!-- FIFTH THIRD BANK — FIXED dates, bullets updated -->
     <div class="exp-card reveal">
       <div class="exp-left">
         <div>
           <div class="exp-company">Fifth Third Bank</div>
-          <div class="exp-period">2024 – Present</div>
+          <div class="exp-period">01/2025 – Present</div>
         </div>
         <span class="exp-tag">Current</span>
       </div>
       <div class="exp-right">
         <div class="exp-role">AI / ML Engineer</div>
         <ul class="exp-bullets">
-  <li>Architected end-to-end ML-powered commercial card and expense automation pipelines using Python, PySpark, and SQL, reducing manual reconciliation by 30%</li>
-  <li>Engineered LightGBM-based anomaly detection models boosting fraud detection accuracy by 28%, deployed via MLflow, Docker, and KServe on Azure AKS with NVIDIA Triton Inference Server</li>
-  <li>Implemented production model monitoring and drift detection using Evidently AI and WhyLabs, triggering automated retraining workflows on Azure AKS</li>
-  <li>Developed a production RAG pipeline using LangChain, OpenAI GPT-4, FAISS, and pgvector over 500k+ financial documents, shortening analyst review time by ~35%</li>
-  <li>Applied LSTM and ARIMA time-series modeling for predictive spend forecasting, minimizing reconciliation errors by 22%</li>
-  <li>Constructed knowledge graphs in Neo4j mapping 200k+ vendor relationships, reducing manual categorization effort by ~25%</li>
-</ul>
+          <li>Architected end-to-end ML-powered commercial card and expense automation pipelines using Python, PySpark, and SQL, integrating classification and predictive models that reduced manual reconciliation by 30%</li>
+          <li>Engineered LightGBM-based anomaly detection models to identify fraudulent expense patterns, boosting detection accuracy by 28%, deployed via MLflow, Docker, and KServe on Azure AKS with NVIDIA Triton Inference Server for low-latency scoring</li>
+          <li>Implemented production model monitoring and drift detection pipelines using Evidently AI and WhyLabs, tracking data drift and feature distribution shifts, triggering automated retraining workflows on Azure AKS</li>
+          <li>Developed a production RAG pipeline using LangChain, OpenAI GPT-4, FAISS, and pgvector over 500k+ unstructured financial documents, shortening analyst document review time by ~35%</li>
+          <li>Applied LSTM and ARIMA-based time-series modeling for predictive spend forecasting across corporate accounts, minimizing reconciliation errors by 22% and improving cash flow visibility</li>
+          <li>Constructed knowledge graphs in Neo4j to map 200k+ vendor relationships, automating expense categorization and reducing manual categorization effort by ~25%</li>
+          <li>Enforced regulatory compliance across AI pipelines adhering to PCI DSS, ISO 20022, and GDPR, implementing secure secrets management via HashiCorp Vault</li>
+        </ul>
       </div>
     </div>
 
+    <!-- CAPGEMINI — FIXED dates, title, bullets updated -->
     <div class="exp-card reveal">
       <div class="exp-left">
         <div>
           <div class="exp-company">Capgemini</div>
-          <div class="exp-period">2022 – 2024</div>
+          <div class="exp-period">08/2021 – 12/2023</div>
         </div>
         <span class="exp-tag v">Healthcare AI</span>
       </div>
       <div class="exp-right">
-        <div class="exp-role">ML Engineer</div>
+        <div class="exp-role">AI / ML Engineer</div>
         <ul class="exp-bullets">
-  <li class="v">Developed Gradient Boosting models to predict 30-day patient readmission risk, improving AUC by 15–18% over baseline clinical scoring methods</li>
-  <li class="v">Built scalable feature engineering pipelines with scikit-learn across multi-source EHR and claims data, cutting data preparation time by 30%</li>
-  <li class="v">Operationalized ML models using MLOps best practices — MLflow experiment tracking, Git versioning, and reproducibility workflows — reducing deployment issues by ~20%</li>
-  <li class="v">Trained PyTorch deep learning models achieving 5–8% precision improvement; integrated spaCy NLP pipelines to extract clinical entities from discharge summaries</li>
-  <li class="v">Incorporated OpenAI API summarization and prompt-engineering workflows, reducing manual patient chart review time by 25–30%</li>
-  <li class="v">Deployed trained models as FastAPIs on AWS (EC2 + S3), enabling near real-time readmission risk scoring integrated with care management platforms</li>
-</ul>
+          <li class="v">Developed Gradient Boosting models in Python to predict 30-day patient readmission risk, improving AUC by 15–18% over baseline clinical scoring methods and directly supporting care management prioritization</li>
+          <li class="v">Built scalable feature engineering pipelines with scikit-learn across multi-source EHR and claims data, cutting data preparation time by 30% and improving model stability across retraining cycles</li>
+          <li class="v">Operationalized ML models using MLOps best practices — MLflow experiment tracking, Git model versioning, and reproducibility workflows — reducing deployment issues by ~20% and improving model auditability</li>
+          <li class="v">Trained PyTorch deep learning models for high-risk patient classification, achieving 5–8% precision improvement over traditional ML baselines; integrated spaCy NLP pipelines to extract clinical entities from discharge summaries</li>
+          <li class="v">Incorporated OpenAI API-based summarization and prompt-engineering workflows into care manager tools, reducing manual patient chart review time by 25–30%</li>
+          <li class="v">Deployed trained models as FastAPIs on AWS (EC2 + S3), enabling near real-time readmission risk scoring integrated seamlessly into care management platforms</li>
+        </ul>
       </div>
     </div>
 
@@ -699,7 +669,7 @@ footer {
       <div class="skill-tags">
         <span class="skill-tag">Python</span><span class="skill-tag">SQL</span>
         <span class="skill-tag">PySpark</span><span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">Scala</span><span class="skill-tag">Java</span>
+        <span class="skill-tag">Java</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -708,9 +678,10 @@ footer {
       <div class="skill-tags">
         <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span>
         <span class="skill-tag">HuggingFace</span><span class="skill-tag">LangChain</span>
-        <span class="skill-tag">OpenAI</span><span class="skill-tag">XGBoost</span>
-        <span class="skill-tag">LightGBM</span><span class="skill-tag">SHAP</span>
-        <span class="skill-tag">spaCy</span>
+        <span class="skill-tag">LangGraph</span><span class="skill-tag">OpenAI</span>
+        <span class="skill-tag">XGBoost</span><span class="skill-tag">LightGBM</span>
+        <span class="skill-tag">SHAP</span><span class="skill-tag">spaCy</span>
+        <span class="skill-tag">FAISS</span><span class="skill-tag">RAG</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -719,33 +690,37 @@ footer {
       <div class="skill-tags">
         <span class="skill-tag">MLflow</span><span class="skill-tag">W&amp;B</span>
         <span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">KServe</span><span class="skill-tag">Triton</span>
+        <span class="skill-tag">Evidently AI</span><span class="skill-tag">WhyLabs</span>
         <span class="skill-tag">Airflow</span><span class="skill-tag">Kafka</span>
         <span class="skill-tag">Databricks</span><span class="skill-tag">Grafana</span>
-        <span class="skill-tag">Prometheus</span><span class="skill-tag">Ray</span>
       </div>
     </div>
     <div class="skill-card reveal">
       <div class="skill-icon">☁️</div>
       <div class="skill-title">Cloud</div>
       <div class="skill-tags">
-        <span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span class="skill-tag">GCP</span>
+        <span class="skill-tag">AWS (EC2, S3, SageMaker)</span>
+        <span class="skill-tag">Azure AKS</span>
+        <span class="skill-tag">GCP (Vertex AI, BigQuery)</span>
       </div>
     </div>
     <div class="skill-card reveal">
       <div class="skill-icon">🗄️</div>
       <div class="skill-title">Databases</div>
       <div class="skill-tags">
-        <span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">Neo4j</span><span class="skill-tag">Snowflake</span>
-        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">PostgreSQL</span><span class="skill-tag">Neo4j</span>
+        <span class="skill-tag">Snowflake</span><span class="skill-tag">pgvector</span>
+        <span class="skill-tag">NoSQL</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-icon">📊</div>
-      <div class="skill-title">Visualization</div>
+      <div class="skill-icon">🔒</div>
+      <div class="skill-title">Compliance & Security</div>
       <div class="skill-tags">
-        <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span>
-        <span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">PCI DSS v4.0</span><span class="skill-tag">HIPAA</span>
+        <span class="skill-tag">GDPR</span><span class="skill-tag">FHIR R4</span>
+        <span class="skill-tag">HashiCorp Vault</span><span class="skill-tag">PHI De-id</span>
       </div>
     </div>
   </div>
@@ -876,7 +851,6 @@ footer {
 <footer>Built by Bharathi Donku · 2025 · AI/ML Engineer</footer>
 
 <script>
-// Scroll reveal
 const els = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
@@ -887,8 +861,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 els.forEach(el => obs.observe(el));
-
-// Immediate hero reveal
 document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('in'));
 </script>
 </body>
