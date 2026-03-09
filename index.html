@@ -855,4 +855,24 @@ footer {
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const els = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(e
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 70);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+els.forEach(el => obs.observe(el));
+
+// Fix for direct anchor navigation — reveal elements already in viewport
+function revealVisible() {
+  document.querySelectorAll('.reveal:not(.in)').forEach((el, i) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      setTimeout(() => el.classList.add('in'), i * 70);
+    }
+  });
+}
+revealVisible();
+window.addEventListener('load', revealVisible);
